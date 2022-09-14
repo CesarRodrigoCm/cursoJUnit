@@ -68,7 +68,8 @@ class CuentaTest {
         @Test
         void testReferencia() {
             Cuenta cuenta2 = new  Cuenta("Cesar", new BigDecimal(1000));
-            assertEquals(cuenta, cuenta2);
+            assertEquals(cuenta2, cuenta);
+            assertEquals(cuenta2, cuenta);
         }
     }
 
