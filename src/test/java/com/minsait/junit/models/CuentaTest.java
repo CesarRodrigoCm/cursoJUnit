@@ -108,7 +108,8 @@ class CuentaTest {
         assertEquals("Dinero Insuficiente", exception.getMessage());
         //Evalular si la exception es correcta
         assertEquals(DineroInsuficienteException.class, exception.getClass());
-        
+        assertTrue(cuenta.getSaldo().compareTo(BigDecimal.ZERO)>0);
+
     }
 
     @Test

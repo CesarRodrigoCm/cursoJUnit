@@ -39,7 +39,7 @@ public class Cuenta {
         this.saldo =this.saldo.add(monto);
     }
 
-    @Override
+    /*@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -50,5 +50,5 @@ public class Cuenta {
     @Override
     public int hashCode() {
         return Objects.hash(persona, saldo, banco);
-    }
+    }*/
 }
