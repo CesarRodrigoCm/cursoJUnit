@@ -18,7 +18,7 @@ class CuentaTest {
 
     @BeforeEach //se ejecuta despues del before All es el 2do
     void setUp(TestInfo testInfo, TestReporter testReporter) {
-        this.cuenta = new Cuenta("Bill Gates", new BigDecimal(1000));
+        this.cuenta = new Cuenta("Cesar", new BigDecimal(1000));
         testReporter.publishEntry("Iniciando el metodo");
         this.testInfo = testInfo;
         this.testReporter = testReporter;
@@ -68,7 +68,7 @@ class CuentaTest {
         @Test
         void testReferencia() {
             Cuenta cuenta2 = new  Cuenta("Cesar", new BigDecimal(1000));
-            assertNotEquals(cuenta, cuenta2);
+            assertEquals(cuenta, cuenta2);
         }
     }
 
@@ -117,8 +117,8 @@ class CuentaTest {
     void testRelacionBancoCuentas() {
         Cuenta cuenta2 = new Cuenta("Bill Gates", new BigDecimal(10000));
         Banco banco = new Banco();
-        banco.addCuenta(cuenta2);
         banco.addCuenta(cuenta);
+        banco.addCuenta(cuenta2);
         banco.setNombre("BBVA");
         banco.tranferir(cuenta2, cuenta, new BigDecimal(9000));
 
